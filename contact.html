@@ -1,39 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | 학생 포트폴리오</title>
+  <title>Contact | 박철우</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">MyHomepage</a>
-      <button class="menu-btn" aria-label="메뉴 열기" onclick="toggleMenu()">☰</button>
-      <nav id="site-nav" class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="experience.html">Experience</a>
-        <a href="contact.html" class="active">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+  <div class="nav-wrap container">
+    <a class="brand" href="index.html">박철우</a>
+    <button class="menu-btn" aria-label="메뉴 열기" onclick="toggleMenu()">☰</button>
+    <nav id="site-nav" class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="experience.html">Experience</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <main class="container">
-    <section class="card">
-      <h1>Contact</h1>
-      <p>이메일, SNS, GitHub, Notion 링크 등을 정리하세요.</p>
-      <ul class="bullets">
-        <li>📧 Email: <a href="mailto:you@example.com">you@example.com</a></li>
-        <li>🐱 GitHub: <a href="https://github.com/USERNAME" target="_blank" rel="noopener">github.com/USERNAME</a></li>
-        <li>🗒️ Notion/Blog: <a href="#" target="_blank" rel="noopener">링크</a></li>
-      </ul>
-    </section>
-  </main>
+<main class="container">
+  <section class="card">
+    <h1>Contact</h1>
+    <ul class="contact-list">
+      <li><strong>Email</strong> <a href="mailto:cwpark1011@gmail.com">cwpark1011@gmail.com</a></li>
+      <li><strong>GitHub</strong> <a target="_blank" href="https://github.com/cwpark1011-bit">github.com/cwpark1011-bit</a></li>
+      <li><strong>학번</strong> 2022804008</li>
+    </ul>
+  </section>
+</main>
 
-  <footer class="site-footer"><div class="container small">© <span id="year"></span> MyHomepage</div></footer>
-  <script src="script.js"></script>
+<footer class="site-footer">
+  <div class="container">© <span id="year"></span> 박철우</div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
