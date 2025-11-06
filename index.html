@@ -1,12 +1,55 @@
-<!DOCTYPE html>
-<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>홈 | 박철우 포트폴리오</title><link rel="stylesheet" href="style.css"></head>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>박철우 | 홈</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html">박철우</a></div></header>
-<main class="container"><section class="hero card">
-<img class="avatar" src="images/profile.jpg" alt="프로필 사진">
-<div><h1>안녕하십니까 광운대학교 국제학부 22학번 박철우입니다.</h1>
-<p>한 줄 슬로건: <strong>인생사 새옹지마</strong></p>
-<p class="muted">관심사: 야구와 게임을 좋아합니다. • 목표: 이번 학기에 학사경고를 피해보자</p></div></section></main>
-<footer class="site-footer"><div class="container small">© <span id="year"></span> 박철우</div></footer>
-<script src="script.js"></script></body></html>
+<header class="site-header">
+  <div class="nav-wrap container">
+    <a class="brand" href="index.html">박철우</a>
+    <button class="menu-btn" aria-label="메뉴 열기" onclick="toggleMenu()">☰</button>
+    <nav id="site-nav" class="nav">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero card">
+    <h1>안녕하십니까 광운대학교 국제학부 22학번 박철우입니다.</h1>
+    <p class="muted">한 줄 슬로건: <strong>인생사 새옹지마</strong></p>
+    <p class="muted">관심사: 야구와 게임을 좋아합니다. • 목표: 이번 학기에 학사경고를 피해보자</p>
+  </section>
+
+  <section class="grid">
+    <article class="card">
+      <h3>바로가기</h3>
+      <ul class="bullets">
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h3>기본 정보</h3>
+      <p>학과: 국제학부</p>
+      <p>학번: 2022804008</p>
+      <p>거주지: 서울특별시 송파구</p>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">© <span id="year"></span> 박철우 • Built with ♥ on GitHub Pages</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
