@@ -1,1 +1,5 @@
-const y=document.getElementById('year');if(y){y.textContent=new Date().getFullYear();}
+function toggleMenu(){
+  const nav = document.getElementById('site-nav');
+  nav.classList.toggle('show');
+}
+document.getElementById('year')?.appendChild(document.createTextNode(new Date().getFullYear()));
