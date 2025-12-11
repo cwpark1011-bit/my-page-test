@@ -2,180 +2,216 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>피자 주문서 (이벤트 활용)</title>
+  <title>My Page Test - Home</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: "맑은 고딕", system-ui, sans-serif;
-      margin: 20px;
+      background-color: #f5f5f5;
+      color: #222;
     }
 
-    h1 {
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 16px 0;
+      margin-bottom: 24px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .site-title {
       font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    fieldset {
-      border: 1px solid #333;
-      padding: 15px;
-      margin-bottom: 20px;
-    }
-
-    legend {
       font-weight: bold;
-      padding: 0 5px;
     }
 
-    .menu-item {
-      margin: 5px 0;
+    nav {
+      margin-top: 12px;
     }
 
-    .menu-item input[type="number"] {
-      width: 50px;
-      text-align: right;
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .line {
-      margin: 10px 0;
+    nav li {
+      background-color: #555;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 14px;
     }
 
-    label {
-      margin-right: 5px;
+    nav li:hover {
+      background-color: #777;
     }
 
-    #address {
-      width: 500px;
+    main {
+      padding-bottom: 40px;
     }
 
-    #total {
-      width: 150px;
-      text-align: right;
+    .hero {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      margin-bottom: 24px;
     }
 
-    button {
-      padding: 5px 10px;
-      margin-right: 5px;
+    .hero h1 {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .section-title {
+      font-size: 20px;
+      margin: 24px 0 12px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 14px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .card a.btn {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 4px;
+      background-color: #4a6cf7;
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .card a.btn:hover {
+      background-color: #3654c7;
+    }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 16px 0;
+      font-size: 13px;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <h1>피자 주문서 (이벤트 활용)</h1>
 
-  <!-- 메뉴 선택 영역 -->
-  <fieldset>
-    <legend>[메뉴 선택]</legend>
-
-    <div class="menu-item">
-      <input type="checkbox" id="combo" data-price="15000">
-      <label for="combo">콤비네이션 피자 (15,000원)</label>
-      <input type="number" id="qty-combo" value="1" min="1">
-      개
+  <header>
+    <div class="container">
+      <div class="site-title">My Page Test</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li><a href="about.html">자기소개</a></li>
+          <li><a href="experience.html">경험</a></li>
+          <li><a href="portfolio.html">포트폴리오</a></li>
+          <li><a href="contact.html">연락처</a></li>
+          <li><a href="pizza.html">실습: 피자 주문</a></li>
+          <li><a href="car.html">실습: 키보드 자동차</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="menu-item">
-      <input type="checkbox" id="pepperoni" data-price="12000">
-      <label for="pepperoni">페퍼로니 피자 (12,000원)</label>
-      <input type="number" id="qty-pepperoni" value="1" min="1">
-      개
+  <main>
+    <div class="container">
+      <section class="hero">
+        <h1>환영합니다!</h1>
+        <p>
+          이 사이트는 GitHub Pages와 HTML/CSS/JavaScript 연습을 위해 만든 개인 페이지입니다.<br>
+          위의 메뉴를 통해 자기소개, 경험, 포트폴리오, 연락처 페이지로 이동할 수 있고,<br>
+          아래에는 수업에서 진행한 실습 페이지(피자 주문, 키보드 자동차)로 바로 이동할 수 있는 링크가 있습니다.
+        </p>
+      </section>
+
+      <h2 class="section-title">프로필 & 포트폴리오</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>자기소개</h3>
+          <p>간단한 자기소개와 기본 정보를 정리한 페이지입니다.</p>
+          <a class="btn" href="about.html">자기소개 보기</a>
+        </div>
+        <div class="card">
+          <h3>경험</h3>
+          <p>수업, 프로젝트, 아르바이트 등 다양한 경험을 정리한 페이지입니다.</p>
+          <a class="btn" href="experience.html">경험 페이지로 이동</a>
+        </div>
+        <div class="card">
+          <h3>포트폴리오</h3>
+          <p>완성한 작업물, 과제, 프로젝트를 모아두는 공간입니다.</p>
+          <a class="btn" href="portfolio.html">포트폴리오 보기</a>
+        </div>
+        <div class="card">
+          <h3>연락처</h3>
+          <p>이메일, SNS 등 연락 가능한 정보를 모아둔 페이지입니다.</p>
+          <a class="btn" href="contact.html">연락처 페이지로 이동</a>
+        </div>
+      </div>
+
+      <h2 class="section-title">실습 페이지</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>피자 주문 실습</h3>
+          <p>체크박스와 입력 칸을 이용해 피자를 주문하고, 합계를 계산하는 이벤트 처리 연습 페이지입니다.</p>
+          <a class="btn" href="pizza.html">피자 주문 페이지로 이동</a>
+        </div>
+        <div class="card">
+          <h3>키보드 자동차 실습</h3>
+          <p>키보드 방향키(←, ↑, →, ↓)를 사용해 버튼(Car)을 움직이며 좌표를 확인하는 JavaScript 실습입니다.</p>
+          <a class="btn" href="car.html">자동차 실습 페이지로 이동</a>
+        </div>
+      </div>
     </div>
+  </main>
 
-    <div class="menu-item">
-      <input type="checkbox" id="cheese" data-price="2000">
-      <label for="cheese">치즈 토핑 추가 (2,000원)</label>
-      <input type="number" id="qty-cheese" value="1" min="1">
-      개
+  <footer>
+    <div class="container">
+      © 2025 My Page Test. All rights reserved.
     </div>
+  </footer>
 
-    <div class="menu-item">
-      <input type="checkbox" id="cola" data-price="1500">
-      <label for="cola">콜라 1.25L (1,500원)</label>
-      <input type="number" id="qty-cola" value="1" min="1">
-      개
-    </div>
-  </fieldset>
-
-  <!-- 배달 주소 -->
-  <div class="line">
-    <label for="address">배달 주소:</label>
-    <input type="text" id="address" placeholder="주소를 입력하세요">
-  </div>
-
-  <!-- 주문 합계 -->
-  <div class="line">
-    <label for="total">주문 합계:</label>
-    <input type="text" id="total" value="0" readonly>
-    원
-  </div>
-
-  <!-- 버튼 -->
-  <div class="line">
-    <button type="button" id="orderBtn">주문하기</button>
-    <button type="button" id="resetBtn">초기화</button>
-  </div>
-
-  <script>
-    // 합계 계산 함수
-    function calculateTotal() {
-      let total = 0;
-
-      const items = [
-        { checkId: "combo", qtyId: "qty-combo" },
-        { checkId: "pepperoni", qtyId: "qty-pepperoni" },
-        { checkId: "cheese", qtyId: "qty-cheese" },
-        { checkId: "cola", qtyId: "qty-cola" }
-      ];
-
-      items.forEach(item => {
-        const checkbox = document.getElementById(item.checkId);
-        const qtyInput = document.getElementById(item.qtyId);
-
-        if (checkbox.checked) {
-          const price = Number(checkbox.dataset.price);
-          const qty = Number(qtyInput.value) || 0;
-          total += price * qty;
-        }
-      });
-
-      document.getElementById("total").value = total.toLocaleString();
-    }
-
-    // 체크박스나 수량이 바뀔 때마다 합계 다시 계산
-    const allInputs = document.querySelectorAll(
-      'input[type="checkbox"], input[type="number"]'
-    );
-    allInputs.forEach(el => {
-      el.addEventListener("change", calculateTotal);
-    });
-
-    // 주문하기 버튼
-    document.getElementById("orderBtn").addEventListener("click", () => {
-      const totalText = document.getElementById("total").value;
-      const address = document.getElementById("address").value.trim();
-
-      if (!address) {
-        alert("배달 주소를 입력하세요.");
-        return;
-      }
-
-      if (totalText === "0" || totalText === "") {
-        alert("메뉴를 선택하세요.");
-        return;
-      }
-
-      alert("주문이 완료되었습니다.\n\n주소: " + address + "\n합계: " + totalText + "원");
-    });
-
-    // 초기화 버튼
-    document.getElementById("resetBtn").addEventListener("click", () => {
-      // 폼 전체를 초기화하는 대신 수동으로 초기화
-      document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
-        cb.checked = false;
-      });
-      document.querySelectorAll('input[type="number"]').forEach(num => {
-        num.value = 1;
-      });
-      document.getElementById("address").value = "";
-      document.getElementById("total").value = "0";
-    });
-  </script>
 </body>
 </html>
