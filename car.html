@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>실습 2: 키보드 자동차</title>
+  <style>
+    body {
+      font-family: "맑은 고딕", sans-serif;
+      margin: 40px;
+    }
+
+    h1 {
+      font-size: 22px;
+    }
+
+    #car {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      width: 80px;
+      height: 40px;
+      background-color: #d98ce3;
+      border: 2px solid black;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    #infoBox {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      padding: 10px;
+      border: 1px solid gray;
+      background-color: #f3f3f3;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>실습 2: 키보드 자동차</h1>
+  <p>방향키(←, ↑, →, ↓)를 눌러 자유롭게 운전해보세요.</p>
+
+  <div id="car">Car</div>
+
+  <div id="infoBox">현재 좌표 (x, y) = (100, 100)</div>
+
+  <script>
+    // 초기 위치
+    let x = 100;
+    let y = 100;
+
+    const speed = 10; // 이동 속도 (px)
+    const car = document.getElementById("car");
+    const info = document.getElementById("infoBox");
+
+    function updateCarPosition() {
+      car.style.left = x + "px";
+      car.style.top = y + "px";
+      info.textContent = `현재 좌표 (x, y) = (${x}, ${y})`;
+    }
+
+    document.addEventListener("keydown", function (event) {
+      switch (event.key) {
+        case "ArrowLeft":
+          x -= speed;
+          break;
+        case "ArrowRight":
+          x += speed;
+          break;
+        case "ArrowUp":
+          y -= speed;
+          break;
+        case "ArrowDown":
+          y += speed;
+          break;
+      }
+      updateCarPosition();
+    });
+
+    // 초기 위치 표시
+    updateCarPosition();
+  </script>
+
+</body>
+</html>
