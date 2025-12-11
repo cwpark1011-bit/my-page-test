@@ -11,54 +11,53 @@
 <header>
     <div class="container header-content">
         <div class="logo">박철우</div>
-        <nav>
+        <nav class="nav-bar">
             <!-- 메인 메뉴 -->
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
             <a href="experience.html">Experience</a>
             <a href="contact.html">Contact</a>
 
-            <!-- 실습 메뉴들 -->
+            <!-- 실습 메뉴 -->
             <a href="pizza.html">Pizza</a>
             <a href="car.html">Car</a>
-            <a href="dom_style.html">Style</a>
-            <a href="dom_list.html">Comment</a>
         </nav>
     </div>
 </header>
 
 <main class="container">
 
-    <section class="welcome-box">
+    <!-- 카드 1: 인사말 -->
+    <section class="section-card">
         <h1>안녕하십니까 광운대학교 국제학부 22학번 박철우입니다.</h1>
-        <p class="subtext">
-            한 줄 슬로건: <strong>인생사 새옹지마</strong><br>
-            관심사: 야구와 게임을 좋아합니다. • 목표: 이번 학기에 학사경고를 피해보자
+        <p class="lead-text">
+            한 줄 슬로건: <strong>인생사 새옹지마</strong>
+        </p>
+        <p>
+            관심사: 야구와 게임을 좋아합니다.<br>
+            목표: 이번 학기에 학사경고를 피해보자
         </p>
     </section>
 
-    <section class="info-grid">
-        <div class="info-box">
-            <h2>바로가기</h2>
-            <ul>
-                <!-- 기존 페이지 -->
-                <li><a href="about.html">About</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="contact.html">Contact</a></li>
-
-                <!-- 실습 페이지 4개 모두 -->
-                <li><a href="pizza.html">실습 1: 피자 주문</a></li>
-                <li><a href="car.html">실습 2: 키보드 자동차</a></li>
-                <li><a href="dom_style.html">실습 3: 스타일 변환기</a></li>
-                <li><a href="dom_list.html">실습 4: 댓글 추가/삭제</a></li>
-            </ul>
-        </div>
-
-        <div class="info-box">
-            <h2>기본 정보</h2>
-            <p>학과: 국제학부</p>
-            <p>학번: 2022804008</p>
-            <p>거주지: 서울특별시 송파구</p>
+    <!-- 카드 2: 바로가기 + 기본 정보 -->
+    <section class="section-card">
+        <div class="two-column">
+            <div class="column">
+                <h2>바로가기</h2>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="pizza.html">피자 주문 실습</a></li>
+                    <li><a href="car.html">키보드 자동차 실습</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>기본 정보</h2>
+                <p>학과: 국제학부</p>
+                <p>학번: 2022804008</p>
+                <p>거주지: 서울특별시 송파구</p>
+            </div>
         </div>
     </section>
 
