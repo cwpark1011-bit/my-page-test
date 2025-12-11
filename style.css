@@ -1,132 +1,140 @@
-:root{
-  --bg:#f6f9ff;          /* 밝은 배경 */
-  --card:#ffffff;        /* 카드(섹션) */
-  --text:#1b2430;        /* 본문 글자 */
-  --muted:#6b7280;       /* 보조 글자 */
-  --primary:#2563eb;     /* 파랑 포인트 */
-  --primary-weak:#e6efff;/* 옅은 파랑 배경 */
-  --shadow:0 8px 24px rgba(0,0,0,.08);
-  --radius:16px;
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family:"Noto Sans KR", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
+body {
+    font-family: "맑은 고딕", system-ui, sans-serif;
+    background-color: #eef1f7;
+    color: #222;
 }
 
-/* 공통 레이아웃 */
-.container{max-width:960px;margin:0 auto;padding:24px}
-.card{
-  background:var(--card);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  padding:24px;
+/* 기본 링크 설정 */
+a {
+    text-decoration: none;
+    color: #4a60f7;
 }
-.grid{
-  display:grid;
-  gap:24px;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-}
-h1,h2,h3{margin:0 0 12px}
-h1{font-size:28px;font-weight:800}
-h3{font-size:18px;font-weight:700}
-p{margin:8px 0}
-.muted{color:var(--muted)}
-ul{margin:8px 0 0 18px}
 
-/* 헤더/네비 */
-.site-header{
-  position:sticky; top:0; z-index:1000;
-  background:rgba(255,255,255,.85);
-  backdrop-filter:saturate(180%) blur(12px);
-  border-bottom:1px solid #e5e7eb;
+a:hover {
+    text-decoration: underline;
 }
-.nav-wrap{display:flex;align-items:center;justify-content:space-between}
-.brand{
-  color:var(--primary); text-decoration:none; font-weight:800; letter-spacing:.2px;
-}
-.menu-btn{
-  display:none; border:0; background:var(--primary); color:#fff;
-  padding:8px 10px; border-radius:10px;
-}
-.nav{display:flex; gap:14px; align-items:center}
-.nav a{
-  text-decoration:none; color:#1f2937; font-weight:600; padding:10px 12px; border-radius:10px
-}
-.nav a:hover{background:var(--primary-weak); color:var(--primary)}
-.nav a.active{background:var(--primary); color:#fff}
 
-/* 히어로 */
-.hero{border:2px solid var(--primary-weak)}
-
-/* 타임라인 */
-.timeline{list-style:none;padding:0;margin:0}
-.timeline li{display:grid;grid-template-columns:110px 1fr;gap:14px;margin:14px 0}
-.timeline .time{color:var(--muted);font-size:14px}
-.timeline .content{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:14px}
-
-/* 연락처 */
-.contact-list{list-style:none;margin:0;padding:0}
-.contact-list li{margin:8px 0}
-.contact-list a{color:var(--primary);text-decoration:none}
-.contact-list a:hover{text-decoration:underline}
-
-/* 푸터 */
-.site-footer{padding:32px 0;color:var(--muted);text-align:left}
-
-/* 반응형 메뉴 */
-@media (max-width:760px){
-  .menu-btn{display:inline-block}
-  .nav{display:none;flex-direction:column;align-items:flex-start;background:#fff;position:absolute;right:16px;top:60px;padding:12px;box-shadow:var(--shadow);border-radius:12px}
-  .nav.show{display:flex}
-}
-/* 전체 컨테이너 여백 */
+/* 전체 레이아웃 컨테이너 */
 .container {
     width: 90%;
-    max-width: 860px;
+    max-width: 880px;
     margin: 0 auto;
 }
 
-/* 상단 헤더 박스 */
-.header-box {
-    padding: 20px 0;
-    background: transparent;
+/* ---------------------- */
+/*     헤더 + 네비게이션    */
+/* ---------------------- */
+
+header {
+    padding: 25px 0;
     margin-bottom: 20px;
 }
 
-/* 네비게이션 박스 */
-.nav-box {
+.header-content {
     display: flex;
-    gap: 14px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* 네비게이션 박스 (상단 메뉴) */
+nav {
+    display: flex;
+    gap: 16px;
     flex-wrap: wrap;
-    padding: 12px 16px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+    background: #fff;
+    padding: 12px 18px;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* 카드 형태 공통 */
-.content-card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+/* 현재 페이지 강조 */
+nav .active {
+    font-weight: bold;
+    color: #2a3bed;
 }
 
-/* 2열 그리드 */
-.grid-2col {
+/* ---------------------- */
+/*         메인 콘텐츠       */
+/* ---------------------- */
+
+main {
+    margin-bottom: 50px;
+}
+
+/* 인사말 박스 */
+.welcome-box {
+    background: #fff;
+    padding: 28px;
+    border-radius: 14px;
+    margin-bottom: 26px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.welcome-box h1 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+/* 부제 텍스트 */
+.subtext {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ---------------------- */
+/*      2-컬럼 정보 박스     */
+/* ---------------------- */
+
+.info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 22px;
 }
 
-/* 본문 텍스트 */
-.subtext {
-    margin-top: 10px;
-    line-height: 1.6;
+/* 개별 카드 박스 */
+.info-box {
+    background: #fff;
+    padding: 22px 25px;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.info-box h2 {
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+/* 리스트 여백 */
+.info-box ul {
+    margin-left: 18px;
+    list-style: disc;
+}
+
+.info-box li {
+    margin-bottom: 6px;
+}
+
+/* ---------------------- */
+/*         푸터             */
+/* ---------------------- */
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #777;
+    font-size: 14px;
 }
