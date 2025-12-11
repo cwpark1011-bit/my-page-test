@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* 전체 배경/글자 */
+/* 전체 배경 / 기본 글꼴 */
 body {
     font-family: "맑은 고딕", system-ui, sans-serif;
     background-color: #eef1f7;
@@ -22,10 +22,10 @@ a:hover {
     text-decoration: underline;
 }
 
-/* 페이지 폭 */
+/* 공통 컨테이너 */
 .container {
     width: 92%;
-    max-width: 960px;          /* 너무 가운데만 몰리지 않게 폭 살짝 넓게 */
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -50,14 +50,14 @@ header {
     font-weight: 700;
 }
 
-/* 상단 메뉴 박스 */
+/* 상단 메뉴 바 */
 .nav-bar {
     display: flex;
     gap: 18px;
     flex-wrap: wrap;
-    padding: 10px 20px;
+    padding: 10px 24px;
     background: #ffffff;
-    border-radius: 20px;
+    border-radius: 24px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 
@@ -67,7 +67,7 @@ header {
 }
 
 /* ------------------ */
-/* 메인 섹션(큰 상자) */
+/* 메인 섹션(큰 카드) */
 /* ------------------ */
 
 main {
@@ -75,7 +75,7 @@ main {
     margin-top: 10px;
 }
 
-/* 큰 카드형 상자 */
+/* 큰 상자(카드) 공통 스타일 */
 .section-card {
     background: #ffffff;
     padding: 28px 30px;
@@ -87,7 +87,7 @@ main {
 /* 제목/문단 여백 */
 .section-card h1 {
     font-size: 28px;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 .section-card h2 {
     font-size: 20px;
@@ -102,13 +102,13 @@ main {
 }
 
 /* ------------------ */
-/* 2열 레이아웃 카드  */
+/* 2열 레이아웃       */
 /* ------------------ */
 
 .two-column {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
-    gap: 32px;                 /* 두 열 사이 충분한 간격 */
+    gap: 32px;                 /* 두 열 사이 간격 */
 }
 
 .column ul {
