@@ -128,3 +128,56 @@ footer {
     color: #777;
     font-size: 14px;
 }
+/* ===========================
+   메인 페이지(홈) 카드 레이아웃
+   =========================== */
+
+/* 메인 영역 위아래 여백 */
+main {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+/* 큰 상자(카드) 공통 스타일 */
+.section-card {
+    background: #ffffff;
+    padding: 28px 32px;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto 26px;  /* 가운데 정렬 + 카드 사이 간격 */
+}
+
+/* 카드 안 제목/문단 여백 */
+.section-card h1 {
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+.section-card h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+.section-card p {
+    margin-bottom: 10px;       /* 문단 사이 간격 */
+    line-height: 1.7;          /* 줄 간격 널널하게 */
+}
+.lead-text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* 두 번째 카드 안의 2열 레이아웃 */
+.two-column {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 32px;                 /* 두 칸 사이 간격 */
+}
+
+/* 왼쪽 컬럼 목록 스타일 */
+.column ul {
+    margin-left: 20px;
+}
+.column li {
+    margin-bottom: 6px;
+}
