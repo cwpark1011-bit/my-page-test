@@ -1,140 +1,130 @@
-/* 기본 설정 */
+/* 기본 리셋 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 전체 배경/글자 */
 body {
     font-family: "맑은 고딕", system-ui, sans-serif;
     background-color: #eef1f7;
     color: #222;
+    line-height: 1.7;          /* 줄 간격 널널하게 */
 }
 
-/* 기본 링크 설정 */
+/* 공통 링크 스타일 */
 a {
     text-decoration: none;
     color: #4a60f7;
 }
-
 a:hover {
     text-decoration: underline;
 }
 
-/* 전체 레이아웃 컨테이너 */
+/* 페이지 폭 */
 .container {
-    width: 90%;
-    max-width: 880px;
+    width: 92%;
+    max-width: 960px;          /* 너무 가운데만 몰리지 않게 폭 살짝 넓게 */
     margin: 0 auto;
 }
 
-/* ---------------------- */
-/*     헤더 + 네비게이션    */
-/* ---------------------- */
+/* ------------------ */
+/* 헤더 / 네비게이션  */
+/* ------------------ */
 
 header {
-    padding: 25px 0;
-    margin-bottom: 20px;
+    padding: 26px 0 18px;
+    margin-bottom: 10px;
 }
 
 .header-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
 
 .logo {
     font-size: 22px;
     font-weight: 700;
-    margin-bottom: 12px;
 }
 
-/* 네비게이션 박스 (상단 메뉴) */
-nav {
+/* 상단 메뉴 박스 */
+.nav-bar {
     display: flex;
-    gap: 16px;
+    gap: 18px;
     flex-wrap: wrap;
-
-    background: #fff;
-    padding: 12px 18px;
-    border-radius: 14px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 
-/* 현재 페이지 강조 */
-nav .active {
-    font-weight: bold;
-    color: #2a3bed;
+/* 현재 메뉴 강조 */
+.nav-bar .active {
+    font-weight: 700;
 }
 
-/* ---------------------- */
-/*         메인 콘텐츠       */
-/* ---------------------- */
+/* ------------------ */
+/* 메인 섹션(큰 상자) */
+/* ------------------ */
 
 main {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+    margin-top: 10px;
 }
 
-/* 인사말 박스 */
-.welcome-box {
-    background: #fff;
-    padding: 28px;
-    border-radius: 14px;
-    margin-bottom: 26px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+/* 큰 카드형 상자 */
+.section-card {
+    background: #ffffff;
+    padding: 28px 30px;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+    margin-bottom: 26px;       /* 섹션 사이 세로 간격 */
 }
 
-.welcome-box h1 {
-    font-size: 26px;
+/* 제목/문단 여백 */
+.section-card h1 {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+.section-card h2 {
+    font-size: 20px;
     margin-bottom: 12px;
 }
-
-/* 부제 텍스트 */
-.subtext {
-    font-size: 15px;
-    line-height: 1.6;
+.section-card p {
+    margin-bottom: 10px;       /* 문단 사이 간격 */
+}
+.lead-text {
+    font-size: 16px;
+    font-weight: 500;
 }
 
-/* ---------------------- */
-/*      2-컬럼 정보 박스     */
-/* ---------------------- */
+/* ------------------ */
+/* 2열 레이아웃 카드  */
+/* ------------------ */
 
-.info-grid {
+.two-column {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 32px;                 /* 두 열 사이 충분한 간격 */
 }
 
-/* 개별 카드 박스 */
-.info-box {
-    background: #fff;
-    padding: 22px 25px;
-    border-radius: 14px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+.column ul {
+    margin-left: 20px;
 }
-
-.info-box h2 {
-    margin-bottom: 12px;
-    font-size: 19px;
-}
-
-/* 리스트 여백 */
-.info-box ul {
-    margin-left: 18px;
-    list-style: disc;
-}
-
-.info-box li {
+.column li {
     margin-bottom: 6px;
 }
 
-/* ---------------------- */
-/*         푸터             */
-/* ---------------------- */
+/* ------------------ */
+/* 푸터               */
+/* ------------------ */
 
 footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 0 26px;
     color: #777;
     font-size: 14px;
 }
