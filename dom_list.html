@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>댓글 추가/삭제</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Noto Sans KR', sans-serif;
+        background: #f5f5f5;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+    }
+
+    .wrap {
+        background: #ffffff;
+        width: 90%;
+        max-width: 600px;
+        padding: 28px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+        font-size: 22px;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+
+    .info {
+        font-size: 14px;
+        color: #616161;
+        margin-bottom: 20px;
+    }
+
+    button {
+        padding: 10px 18px;
+        background-color: #43a047;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 18px;
+        transition: 0.15s;
+    }
+
+    button:hover {
+        background-color: #2e7d32;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        padding: 10px 14px;
+        background: #f1f8e9;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: 0.2s;
+    }
+
+    li:hover {
+        background: #dcedc8;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="wrap">
+    <h3>실습 2: 댓글 추가/삭제 프로그램</h3>
+    <p class="info">아래 목록을 클릭하면 해당 항목이 삭제됩니다.</p>
+
+    
+    <button onclick="addComment()">+ 댓글 추가하기</button>
+
+    <ul id="commentList"></ul>
+</div>
+
+<script>
+    
+    function addComment() {
+        var inputStr = prompt("추가할 댓글 내용을 입력하세요:");
+
+        if (inputStr != null && inputStr.trim() !== "") {
+            var parent = document.getElementById("commentList");
+
+            var newLi = document.createElement("li");
+            newLi.textContent = inputStr;
+
+            newLi.onclick = function () {
+                this.remove();   
+            };
+
+            parent.appendChild(newLi);
+        }
+    }
+
+    window.onload = function () {
+        addComment();
+    };
+</script>
+
+</body>
+</html>
