@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>D-Day 계산기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <div class="logo">박철우</div>
+        <nav class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="dday.html" class="active">D-Day</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="section-card">
+        <h1>D-Day 계산기</h1>
+        <p>기준 날짜를 선택하면 오늘 기준 D-Day를 계산합니다.</p>
+
+        <input type="date" id="targetDate">
+        <button onclick="calcDday()">계산</button>
+
+        <h2 id="result"></h2>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 박철우</p>
+</footer>
+
+<script>
+function calcDday() {
+    const target = new Date(document.getElementById("targetDate").value);
+    const today = new Date();
+    const diff = Math.ceil((target - today) / (1000 * 60 * 60 * 24));
+    document.getElementById("result").innerText =
+        diff >= 0 ? `D-${diff}` : `D+${Math.abs(diff)}`;
+}
+</script>
+
+</body>
+</html>
