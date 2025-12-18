@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>랜덤 뽑기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <div class="logo">박철우</div>
+        <nav class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="random.html" class="active">Random</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="section-card">
+        <h1>랜덤 숫자 뽑기</h1>
+        <p>1부터 10 사이의 숫자를 랜덤으로 뽑습니다.</p>
+
+        <button onclick="pick()">뽑기</button>
+        <h2 id="result">?</h2>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 박철우</p>
+</footer>
+
+<script>
+function pick() {
+    const num = Math.floor(Math.random() * 10) + 1;
+    document.getElementById("result").innerText = num;
+}
+</script>
+
+</body>
+</html>
